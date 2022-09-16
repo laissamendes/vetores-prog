@@ -1,0 +1,42 @@
+<script>
+    //Problema: Loja de veículos
+    //Crie os seguintes arrays:
+    // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    // let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    // let carrosHatch = ["308", "Focus", "i30"];
+    
+    //Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar 
+    //o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    //Apresente a lista final de cada tipo de veículo.
+
+    //ENTRADA
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"]; 
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"]; 
+    let carrosHatch = ["308", "Focus", "i30"];   
+    const carro1 = prompt(`Diga qual carro deseja adicionar a lista: ${carrosSUV.join(", ")} ${carrosSedan.join(", ")} ${carrosHatch.join(", ")}`);
+    const tipoCarro1 = prompt(`Diga qual tipo de carro deseja adicionar a lista (SUV | Sedan | Hatch)`).trim().toLowerCase();
+    const carro2 = prompt(`Diga qual carro deseja adicionar a lista: (${carrosSUV.join(", ")}) | (${carrosSedan.join(", ")}) | (${carrosHatch.join(", ")})`);
+    const tipoCarro2 = prompt(`Diga qual tipo de carro deseja adicionar a lista (SUV | Sedan | Hatch)`).trim().toLowerCase();
+    const carro3 = prompt(`Diga qual carro deseja adicionar a lista: (${carrosSUV.join(", ")}) | (${carrosSedan.join(", ")}) | (${carrosHatch.join(", ")})`);
+    const tipoCarro3 = prompt(`Diga qual tipo de carro deseja adicionar a lista (SUV | Sedan | Hatch)`).trim().toLowerCase();
+    //PROCESSAMENTO
+
+    (tipoCarro1 === "suv") ? carrosSUV.push(carro1)
+    : (tipoCarro1 === "sedan") ? carrosSedan.push(carro1)
+    : carrosHatch.push(carro1);
+
+    (tipoCarro2 === "suv") ? carrosSUV.push(carro2)
+    : (tipoCarro2 === "sedan") ? carrosSedan.push(carro2)
+    : carrosHatch.push(carro2);
+
+    (tipoCarro3 === "suv") ? carrosSUV.push(carro3)
+    : (tipoCarro3 === "sedan") ? carrosSedan.push(carro3)
+    : carrosHatch.push(carro3);
+
+    //SAÍDA
+
+document.write("Lista carros SUV: "+carrosSUV.join(", ")+ "</br>");
+document.write("Lista carros Sedan: "+carrosSedan.join(", ")+ "</br>");
+document.write("Lista carros Hatch: "+carrosHatch.join(", "));
+</script>

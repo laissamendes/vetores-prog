@@ -1,0 +1,22 @@
+<script>
+    //Problema: Array em ordem crescente
+    //Peça para um usuário inserir dois números. Crie um array com os números, colocando-os em ordem crescente. Para ordenar, NÃO use o
+    // método sort();
+    //Retorne os elementos do array, separando-os por hífen (n1 - n2).
+
+    //ENTRADA
+
+    const numero1 = parseInt(prompt("Diga o número 1:"));
+    const numero2 = parseInt(prompt("Diga o número 2:"));
+    let resultadoNaTela;
+
+    //PROCESSAMENTO
+
+if (numero1<numero2) {
+    resultadoNaTela = [numero1, numero2];
+} else {
+    resultadoNaTela = [numero2, numero1];
+}
+    //SAÍDA
+   document.write(resultadoNaTela.join(" - "));
+</script>
